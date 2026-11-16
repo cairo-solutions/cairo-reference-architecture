@@ -395,7 +395,7 @@ The non-production instance is a temporary local container with no production cr
 | D16 | Whether to connect any operational Base44 app (B2), separately per app |
 | D17 | How to resolve the current merge deadlock on this public repository (immediate; see Current environment) |
 
-**Separate open decision, not covered here:** the scheduling and invoice exception under [ADR-004](004-human-approval-gates-for-agents.md), raised by ADR-008 (in review in pull request #7). ADR-009 does not resolve it or treat it as normal practice.
+**Separate decision, not covered here:** the scheduling and invoice exception under [ADR-004](004-human-approval-gates-for-agents.md), raised by ADR-008. The director resolved it on November 16, 2026 as standing approval SA-1 in ADR-004. ADR-009 does not rely on it or extend it.
 
 ## Consequences
 

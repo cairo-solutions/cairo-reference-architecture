@@ -75,7 +75,7 @@ Proposals are assembled by several agents in sequence, and the director steps in
 
 Every booking request, whether from website chat, a phone call, an existing client, or outbound prospecting, goes to one coordinator: the Marketing & Reception Manager.
 
-1. The Reception sub-agent collects the request and passes it on. **Exception:** on the public website it can check availability and place a 24-hour hold for a strategy session, which is not confirmed until paid ([ADR-008](../decisions/008-website-chat-with-in-conversation-tools.md)). Whether this becomes a standing approval under [ADR-004](../decisions/004-human-approval-gates-for-agents.md) is an open decision.
+1. The Reception sub-agent collects the request and passes it on. **Exception:** on the public website it can check availability and place a 24-hour hold for a strategy session, which is not confirmed until paid ([ADR-008](../decisions/008-website-chat-with-in-conversation-tools.md)). Since November 16, 2026 this runs under standing approval [SA-1 in ADR-004](../decisions/004-human-approval-gates-for-agents.md#sa-1-website-strategy-session-hold-and-invoice), which sets its scope and limits.
 2. The coordinator gets available slots from the agent that holds the availability model. Rules differ by calendar type: a class or a client meeting is fixed, while some work blocks are flexible.
 3. Conflicts get a proposed resolution, and anything ambiguous goes to the director before it is finalized.
 4. The coordinator confirms with the client and is the only agent that notifies the director of a new booking.
