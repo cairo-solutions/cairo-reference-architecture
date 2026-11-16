@@ -2,7 +2,7 @@
 
 Where the CAIRO operating system stands. Component names are generic; see the [operating model](multi-agent-operating-model.md) for what each role does.
 
-**Last updated:** November 11, 2026
+**Last updated:** November 16, 2026
 
 ## How to read this page
 
@@ -44,7 +44,7 @@ No component on this page has been independently evaluated.
 | Component | Lifecycle | Assurance | Basis and notes |
 |---|---|---|---|
 | Website chat intake | Live | Director-reported | Since Oct 21, 2026 the public site uses a conversational voice-and-text widget that calls the intake pipeline during the conversation ([ADR-008](../decisions/008-website-chat-with-in-conversation-tools.md)). Since Nov 11, 2026 the widget runs a website-only agent with a reduced tool set, separate from the internal agent. Nov 11, 2026: the director ran two test conversations; Claude reviewed the transcripts and the team-chat log. Intake, availability check, and handoff to the manager worked. Incomplete and abusive inputs not yet tested; no test record published here |
-| Website scheduling: availability check and 24-hour hold | Live | Director-reported | Hold is not confirmed until the session fee is paid ([ADR-008](../decisions/008-website-chat-with-in-conversation-tools.md)). A server-side limit on holds was added Nov 11, 2026. In the Nov 11 test, a second hold for the same visitor was refused, no invoice was sent, and the request went to human review. Two defects found: the handoff card mislabeled the request type and sent it through an unneeded booking check, and the agent's closing wording implied a session after the refusal. Fixes for both were published Nov 11, 2026 and checked only with simulated test data; not yet verified in a live conversation |
+| Website scheduling: availability check and 24-hour hold | Live | Director-reported | Hold is not confirmed until the session fee is paid ([ADR-008](../decisions/008-website-chat-with-in-conversation-tools.md)). Since Nov 16, 2026 it runs under standing approval [SA-1](../decisions/004-human-approval-gates-for-agents.md#sa-1-website-strategy-session-hold-and-invoice); the approval does not change this row's assurance status. A server-side limit on holds was added Nov 11, 2026. In the Nov 11 test, a second hold for the same visitor was refused, no invoice was sent, and the request went to human review. Two defects found: the handoff card mislabeled the request type and sent it through an unneeded booking check, and the agent's closing wording implied a session after the refusal. Fixes for both were published Nov 11, 2026 and checked only with simulated test data; not yet verified in a live conversation |
 | Phone intake | In progress | Not yet verified | The reception voice agent exists but does not answer phone calls yet |
 | Intake into the CRM, end to end | In progress | Not yet verified | No end-to-end test lead recorded |
 | Member-portal avatar | Live | Not yet verified | Moved from the public site to the member portal Oct 21, 2026 |
