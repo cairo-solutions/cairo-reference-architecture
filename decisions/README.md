@@ -13,5 +13,6 @@ Each record captures one significant decision: the context, the options consider
 | [007](007-agent-identity-and-observability.md) | Every agent has its own identity, and every step is observable | Accepted, in progress |
 | [008](008-website-chat-with-in-conversation-tools.md) | Website chat uses a conversational widget with in-conversation tools | Accepted; live, not yet verified. Booking exception approved as SA-1 in ADR-004 |
 | [009](009-version-control-for-workflows-and-apps.md) | Version control for workflow exports and app-builder source | Proposed |
+| [010](010-offline-lead-scoring-evaluation.md) | Offline evaluation harness for intake lead scoring | Proposed |
 
 Status here describes the decision and its lifecycle. Assurance (what has actually been checked) is tracked in [build status](../architecture/build-status.md).
