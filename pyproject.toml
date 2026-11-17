@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69,<85"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cairo-schema-contracts"
+version = "0.0.0"
+description = "Local contract tests for JSON Schemas in this reference repository. Not a published application."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "jsonschema>=4.26,<5",
+    "mypy>=2.4,<3",
+    "pytest>=9.2,<10",
+    "ruff>=0.17.5,<0.18",
+    "types-jsonschema>=4.26,<4.27",
+]
+
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests/python"]
+addopts = ["--strict-config", "--strict-markers"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["tests/python"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["tests/python"]
+mypy_path = "tests/python"
+strict = true
+warn_unused_ignores = true
