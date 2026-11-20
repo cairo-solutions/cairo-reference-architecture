@@ -37,6 +37,27 @@ Design (architecture + risk review)
    → Version control (this pattern, in a private repo per environment)
 ```
 
+## Running the checks
+
+The intake workflow's Code-node tests run with Node:
+
+```bash
+node workflows/client-intake-agent/tests/code-nodes.test.js
+```
+
+JSON Schema contracts use Python 3.11 or newer. From the repository root:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+ruff check
+mypy
+pytest
+```
+
+`pytest` finds every `*.schema.json` file. It checks that each document is valid for its declared `$schema` draft, that `tests/python/fixtures/` has a synthetic valid example and targeted invalid examples, and that the client-intake samples match the schemas named in that workflow's README. Format keywords are checked with jsonschema's format checker. Its `email` check only requires an `@`; it is not the regular expression in the workflow's Validate & Normalize node.
+
 ## About
 
 CAIRO Solutions LLC is a Sacramento-based AI automation agency working across four practice areas: **AI Architecture, AI Strategy, Governance/Risk/Compliance (GRC), and Orchestration.**

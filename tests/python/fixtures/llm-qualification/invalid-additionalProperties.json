@@ -1,0 +1,6 @@
+{
+  "summary": "Fictional qualification with a workflow annotation the LLM schema does not allow.",
+  "recommended_tier": "Growth",
+  "qualification_score": 55,
+  "needs_human_review": false
+}

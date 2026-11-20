@@ -44,11 +44,15 @@ tests/code-nodes.test.js            Runs the validation and parsing logic outsid
 
 ## Running the tests
 
+Code-node behavior, outside n8n:
+
 ```bash
 node workflows/client-intake-agent/tests/code-nodes.test.js
 ```
 
 The tests confirm that valid input passes, empty and malformed input is rejected without crashing, and malformed, off-schema, or missing LLM output always routes to human review.
+
+`schemas/*.schema.json` and the samples in `samples/` are also checked by the Python contract tests described in the repository README. Those tests validate documents; they do not run this workflow.
 
 ## Using this workflow
 
